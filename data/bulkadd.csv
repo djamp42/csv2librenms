@@ -1,0 +1,5 @@
+hostname,ro,sysname,hardware,location_id
+10.18.0.40,publicsnmpstring,PING ONLY AP,CISCO1142,142
+10.18.0.41,publicsnmpstring,PING ONLY AP,CISCO1142,142
+10.18.0.42,publicsnmpstring,PING ONLY AP,CISCO1142,142
+10.18.0.43,publicsnmpstring,PING ONLY AP,CISCO1142,142

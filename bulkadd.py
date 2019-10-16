@@ -17,7 +17,7 @@ def device_add(add_request):
     r = requests.post(api_url, json=add_request, headers=request_headers)
     print(r.text)
 
-def device_update(hostname, update_request):
+def device_update(update_request):
     api_url = "http://{}/api/v0/devices".format(config.librenms_ipaddress)
     r = requests.patch(api_url, json=update_request, headers=request_headers)
     print(r.text)
@@ -34,17 +34,23 @@ def bulkaddping():
             "hardware":row['hardware'],
             "force_add":"true",
             "snmp_disable":"true"
-        }
-        location_update = {
-            "field":["location_id","override_sysLocation"],
-            "data":[row['location_id'],row['override_sysLocation']]
-        }
-
-        # Make LibreNMS API call and add device to LibreNMS.
+                 }
+        # Add device to LibreNMS.
         device_add(device)
-        # We cannot add location information via device add, but we can update the device syslocation field after it's added
 
-        device_update(row['hostname'], location_update)
+        # In order to add a location to PING only devices, you need to first create a device in that
+        # location manually with the LibreNMS webgui. To get the Location ID, in the webgui go to
+        # Geo Locations -> All Locations -> Click on the location, your url should contain the Location ID:
+        # http://#.#.#.#/devices/location=213  (213 is the location ID)
+
+        if row['location_id'] == "":
+            continue
+        else:
+            location = {
+                "field":["location_id","override_sysLocation"],
+                "data":[row['location_id'],row['override_sysLocation']]
+                        }
+            device_update(location)
 
 
 def bulkaddsnmpv2():
