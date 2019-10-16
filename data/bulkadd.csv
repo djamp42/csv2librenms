@@ -1,5 +1,7 @@
-hostname,ro,sysname,hardware,location_id
-10.18.0.40,publicsnmpstring,PING ONLY AP,CISCO1142,142
-10.18.0.41,publicsnmpstring,PING ONLY AP,CISCO1142,142
-10.18.0.42,publicsnmpstring,PING ONLY AP,CISCO1142,142
-10.18.0.43,publicsnmpstring,PING ONLY AP,CISCO1142,142
+hostname,os,sysname,hardware,location_id,ro
+192.168.2.40,ciscowap,"Bldg 123, Room 1",AIR-LAP1142N-A-K9,721,
+192.168.2.41,ciscowap,"Bldg 123, Room 2",AIR-LAP1142N-A-K9,721,
+192.168.2.42,ciscowap,"Bldg 123, Room 3",AIR-LAP1142N-A-K9,721,
+192.168.2.43,ciscowap,"Bldg 123, Room 4",AIR-LAP1142N-A-K9,721,
+192.168.2.44,ciscowap,"Bldg 123, Room 5",AIR-LAP1142N-A-K9,721,
+192.168.2.2,,,,,publicsnmpstring
