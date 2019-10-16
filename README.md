@@ -22,6 +22,6 @@ them via the LibreNMS webgui.
   you need to first create a device in that location manually with the
   LibreNMS webgui. To get the Location ID, in the webgui go to Geo
   Locations -> All Locations -> Click on the location, your url should
-  contain the Location ID: # http://#.#.#.#/devices/location=213 (213 is
+  contain the Location ID: http://#.#.#.#/devices/location=213 (213 is
   the location ID)
 
