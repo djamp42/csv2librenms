@@ -19,7 +19,7 @@ them via the LibreNMS webgui.
 - **sysname**: sysname of device
 - **os**: this is the os name in librenms, you can get a list of os
   names from
-  [https://github.com/librenms/librenms/tree/master/includes/definitions]()
+  [LibreNMS OS definitions](https://github.com/librenms/librenms/tree/master/includes/definitions)
 - **hardware**: hardware description of device
 - **location_id**: In order to add a syslocation to PING only devices,
   you need to first create a device in that location manually with the
